@@ -1,0 +1,28 @@
+[package]
+name = "num-absurd"
+version = "0.1.0"
+edition = "2024"
+authors = ["J. Mtskerashvili <orcid:0009-0007-6955-6129>"]
+description = "A mathematical framework extending traditional field theory to allow division by zero in an algebraically consistent manner"
+documentation = "https://docs.rs/num-absurd"
+homepage = "https://github.com/mtskerashvili/num-absurd"
+repository = "https://github.com/mtskerashvili/num-absurd"
+license = "MIT"
+keywords = ["mathematics", "algebra", "complex-numbers", "division-by-zero", "number-theory"]
+categories = ["mathematics", "science", "algorithms", "no-std"]
+
+[lib]
+doctest = false
+
+[features]
+default = ["std"]
+std = ["num-complex/std"]
+serde = ["num-complex/serde"]
+
+[dependencies]
+num-complex = "0.4.6"
+num-traits = "0.2.19"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
